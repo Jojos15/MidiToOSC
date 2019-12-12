@@ -17,14 +17,6 @@
   </transmitters>
   <morphAdaptors>
     <entry>
-      <string>MainThread</string>
-      <com.confusionists.mjdj.settings.MorphAdaptor>
-        <active>true</active>
-        <orderNumber>0</orderNumber>
-        <dead>false</dead>
-      </com.confusionists.mjdj.settings.MorphAdaptor>
-    </entry>
-    <entry>
       <string>Null-Connection (Right-Click to Open)</string>
       <com.confusionists.mjdj.settings.MorphAdaptor>
         <active>false</active>
@@ -42,6 +34,14 @@
             </entry>
           </hashtable>
         </serializablePiece>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+    <entry>
+      <string>MainThread</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>true</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
       </com.confusionists.mjdj.settings.MorphAdaptor>
     </entry>
   </morphAdaptors>

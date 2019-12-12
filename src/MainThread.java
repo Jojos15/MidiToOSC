@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.util.Collections;
 
+import static java.lang.Math.round;
+
 public class MainThread extends AbstractMorph {
 
     OSCPortOut sender;
@@ -56,6 +58,15 @@ public class MainThread extends AbstractMorph {
                     swap = true;
                 }
             }
+        }
+        else if(shortMessageWrapper.isControlChange()){
+            int pos = (shortMessageWrapper.getData1() + 2) % 10;
+
+            int vol = (int) round((100.0/127.0) * shortMessageWrapper.getData2());
+
+            OSCMessage msg = new OSCMessage("/exec/1/" + pos + "/", Collections.singletonList(vol));
+
+            sender.send(msg);
         }
         return false;
     }
