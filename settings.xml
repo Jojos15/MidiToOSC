@@ -1,0 +1,49 @@
+<com.confusionists.mjdj.settings.Settings>
+  <receivers>
+    <entry>
+      <string>Unknown vendor - APC MINI</string>
+      <boolean>true</boolean>
+    </entry>
+    <entry>
+      <string>Unknown vendor - Microsoft MIDI Mapper</string>
+      <boolean>false</boolean>
+    </entry>
+  </receivers>
+  <transmitters>
+    <entry>
+      <string>Unknown vendor - APC MINI</string>
+      <boolean>true</boolean>
+    </entry>
+  </transmitters>
+  <morphAdaptors>
+    <entry>
+      <string>MainThread</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>true</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+    <entry>
+      <string>Null-Connection (Right-Click to Open)</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>false</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
+        <serializablePiece class="list">
+          <hashtable>
+            <entry>
+              <string>in</string>
+              <string>All Active</string>
+            </entry>
+            <entry>
+              <string>out</string>
+              <string>All Active</string>
+            </entry>
+          </hashtable>
+        </serializablePiece>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+  </morphAdaptors>
+  <doNotUseComSunDrivers>false</doNotUseComSunDrivers>
+</com.confusionists.mjdj.settings.Settings>
