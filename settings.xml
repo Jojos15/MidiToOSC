@@ -17,6 +17,14 @@
   </transmitters>
   <morphAdaptors>
     <entry>
+      <string>OSC</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>true</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+    <entry>
       <string>Null-Connection (Right-Click to Open)</string>
       <com.confusionists.mjdj.settings.MorphAdaptor>
         <active>false</active>
@@ -37,7 +45,7 @@
       </com.confusionists.mjdj.settings.MorphAdaptor>
     </entry>
     <entry>
-      <string>MainThread</string>
+      <string>OSC to Midi</string>
       <com.confusionists.mjdj.settings.MorphAdaptor>
         <active>true</active>
         <orderNumber>0</orderNumber>
