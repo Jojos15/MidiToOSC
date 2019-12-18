@@ -59,6 +59,11 @@ public class OSC extends AbstractMorph {
         ShortMessageWrapper shortMessageWrapper = messageWrapper.getAsShortMessageWrapper();
 
         if(shortMessageWrapper.isNoteOn()){
+            if(shortMessageWrapper.getData1()>=64&&shortMessageWrapper.getData1()<=71){
+                int pos = ((shortMessageWrapper.getData1()+6) % 10) + 1;
+                OSCMessage msg = new OSCMessage("/pb/" + pos + "/pause");
+                sender.send(msg);
+            }
             if(shortMessageWrapper.getData1()!=98) {
                 int posy = shortMessageWrapper.getData1() / 8;
                 int posx = shortMessageWrapper.getData1() % 8;
