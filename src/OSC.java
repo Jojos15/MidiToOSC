@@ -63,6 +63,7 @@ public class OSC extends AbstractMorph {
                 int pos = ((shortMessageWrapper.getData1()+6) % 10) + 1;
                 OSCMessage msg = new OSCMessage("/pb/" + pos + "/pause");
                 sender.send(msg);
+                return false;
             }
             if(shortMessageWrapper.getData1()!=98) {
                 int posy = shortMessageWrapper.getData1() / 8;
