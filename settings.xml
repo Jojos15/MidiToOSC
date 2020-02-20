@@ -14,10 +14,14 @@
       <string>Unknown vendor - APC MINI</string>
       <boolean>true</boolean>
     </entry>
+    <entry>
+      <string>Unknown vendor - MIDIIN2 (LPMiniMK3 MIDI)</string>
+      <boolean>true</boolean>
+    </entry>
   </transmitters>
   <morphAdaptors>
     <entry>
-      <string>OSC</string>
+      <string>Novation OSC</string>
       <com.confusionists.mjdj.settings.MorphAdaptor>
         <active>true</active>
         <orderNumber>0</orderNumber>
@@ -45,7 +49,31 @@
       </com.confusionists.mjdj.settings.MorphAdaptor>
     </entry>
     <entry>
+      <string>AkaiOSC to Midi</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>true</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+    <entry>
+      <string>Akai OSC</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>false</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+    <entry>
       <string>OSC to Midi</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>false</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+    <entry>
+      <string>AkaiOSC</string>
       <com.confusionists.mjdj.settings.MorphAdaptor>
         <active>true</active>
         <orderNumber>0</orderNumber>

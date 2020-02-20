@@ -3,7 +3,6 @@ import com.confusionists.mjdjApi.midi.ShortMessageWrapper;
 import com.confusionists.mjdjApi.morph.AbstractMorph;
 import com.confusionists.mjdjApi.morph.DeviceNotFoundException;
 import com.illposed.osc.OSCMessage;
-import com.illposed.osc.transport.udp.OSCPort;
 import com.illposed.osc.transport.udp.OSCPortOut;
 
 import javax.sound.midi.InvalidMidiDataException;
@@ -14,28 +13,23 @@ import java.util.Collections;
 
 import static java.lang.Math.round;
 
-public class OSC extends AbstractMorph {
+public class AkaiOSC extends AbstractMorph {
 
     OSCPortOut sender;
     boolean swap = false;
-    boolean state[] = new boolean[64];
 
     @Override
     public String getName() {
-        return "OSC to Midi";
+        return "Akai OSC";
     }
 
     @Override
     public void init() throws DeviceNotFoundException {
-
         try {
             sender = new OSCPortOut(InetAddress.getLocalHost(), 8000);
             getService().log(InetAddress.getLocalHost().toString());
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        for(int i=0; i<64; i++){
-            state[i] = false;
         }
         int light = 1;
         for(int i=0; i<100; i++){
@@ -57,8 +51,9 @@ public class OSC extends AbstractMorph {
     @Override
     public boolean process(MessageWrapper messageWrapper, String s) throws Throwable {
         ShortMessageWrapper shortMessageWrapper = messageWrapper.getAsShortMessageWrapper();
+        ShortMessage miniMessage = shortMessageWrapper.getShortMessage();
 
-        if(shortMessageWrapper.isNoteOn()){
+        if(shortMessageWrapper.isNoteOn() && miniMessage.getChannel() == 0){
             if(shortMessageWrapper.getData1()>=64&&shortMessageWrapper.getData1()<=71){
                 int pos = ((shortMessageWrapper.getData1()+6) % 10) + 1;
                 OSCMessage msg = new OSCMessage("/pb/" + pos + "/pause");
@@ -69,18 +64,9 @@ public class OSC extends AbstractMorph {
                 int posy = shortMessageWrapper.getData1() / 8;
                 int posx = shortMessageWrapper.getData1() % 8;
                 int gridPos = (7 - posy) * 8 + posx + 1;
-                /*if(!state[shortMessageWrapper.getData1()]) {
-                    OSCMessage msg = new OSCMessage("/exec/2/" + gridPos + "/", Collections.singletonList(1));
-                    sender.send(msg);
-                    state[shortMessageWrapper.getData1()] = !state[shortMessageWrapper.getData1()];
-                }
-                else{
-                    OSCMessage msg = new OSCMessage("/exec/2/" + gridPos + "/", Collections.singletonList(0));
-                    sender.send(msg);
-                    state[shortMessageWrapper.getData1()] = !state[shortMessageWrapper.getData1()];
-                }*/
                 OSCMessage msg = new OSCMessage("/exec/2/" + gridPos + "/", Collections.singletonList(1));
                 sender.send(msg);
+                getService().log(gridPos + " AKAI");
             }
             else {
                 getService().log("SWAP");

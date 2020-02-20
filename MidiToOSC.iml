@@ -72,6 +72,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="com.illposed.osc:javaosc-core:0.6" level="project" />
+    <orderEntry type="library" exported="" name="com.illposed.osc:javaosc-core:0.6" level="project" />
   </component>
 </module>
