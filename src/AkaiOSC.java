@@ -66,7 +66,7 @@ public class AkaiOSC extends AbstractMorph {
                 int gridPos = (7 - posy) * 8 + posx + 1;
                 OSCMessage msg = new OSCMessage("/exec/2/" + gridPos + "/", Collections.singletonList(1));
                 sender.send(msg);
-                getService().log(gridPos + " AKAI");
+                //getService().log(gridPos + " AKAI");
             }
             else {
                 getService().log("SWAP");

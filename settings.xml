@@ -29,6 +29,14 @@
       </com.confusionists.mjdj.settings.MorphAdaptor>
     </entry>
     <entry>
+      <string>AkaiOSC to Midi</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>true</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+    <entry>
       <string>Null-Connection (Right-Click to Open)</string>
       <com.confusionists.mjdj.settings.MorphAdaptor>
         <active>false</active>
@@ -49,17 +57,9 @@
       </com.confusionists.mjdj.settings.MorphAdaptor>
     </entry>
     <entry>
-      <string>AkaiOSC to Midi</string>
-      <com.confusionists.mjdj.settings.MorphAdaptor>
-        <active>true</active>
-        <orderNumber>0</orderNumber>
-        <dead>false</dead>
-      </com.confusionists.mjdj.settings.MorphAdaptor>
-    </entry>
-    <entry>
       <string>Akai OSC</string>
       <com.confusionists.mjdj.settings.MorphAdaptor>
-        <active>false</active>
+        <active>true</active>
         <orderNumber>0</orderNumber>
         <dead>false</dead>
       </com.confusionists.mjdj.settings.MorphAdaptor>
