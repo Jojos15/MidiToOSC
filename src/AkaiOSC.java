@@ -54,12 +54,12 @@ public class AkaiOSC extends AbstractMorph {
         ShortMessage miniMessage = shortMessageWrapper.getShortMessage();
 
         if(shortMessageWrapper.isNoteOn() && miniMessage.getChannel() == 0){
-            if(shortMessageWrapper.getData1()>=64&&shortMessageWrapper.getData1()<=71){
+            /*if(shortMessageWrapper.getData1()>=64&&shortMessageWrapper.getData1()<=71){
                 int pos = ((shortMessageWrapper.getData1()+6) % 10) + 1;
                 OSCMessage msg = new OSCMessage("/pb/" + pos + "/pause");
                 sender.send(msg);
                 return false;
-            }
+            }*/
             if(shortMessageWrapper.getData1()!=98) {
                 int posy = shortMessageWrapper.getData1() / 8;
                 int posx = shortMessageWrapper.getData1() % 8;
@@ -69,7 +69,7 @@ public class AkaiOSC extends AbstractMorph {
                 //getService().log(gridPos + " AKAI");
             }
             else {
-                getService().log("SWAP");
+                //getService().log("SWAP");
                 if(!swap) {
                     OSCMessage msg = new OSCMessage("/swap/", Collections.singletonList(1));
                     sender.send(msg);

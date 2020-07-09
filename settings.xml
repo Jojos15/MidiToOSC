@@ -2,7 +2,7 @@
   <receivers>
     <entry>
       <string>Unknown vendor - APC MINI</string>
-      <boolean>true</boolean>
+      <boolean>false</boolean>
     </entry>
     <entry>
       <string>Unknown vendor - Microsoft MIDI Mapper</string>
@@ -29,14 +29,6 @@
       </com.confusionists.mjdj.settings.MorphAdaptor>
     </entry>
     <entry>
-      <string>AkaiOSC to Midi</string>
-      <com.confusionists.mjdj.settings.MorphAdaptor>
-        <active>true</active>
-        <orderNumber>0</orderNumber>
-        <dead>false</dead>
-      </com.confusionists.mjdj.settings.MorphAdaptor>
-    </entry>
-    <entry>
       <string>Null-Connection (Right-Click to Open)</string>
       <com.confusionists.mjdj.settings.MorphAdaptor>
         <active>false</active>
@@ -54,6 +46,14 @@
             </entry>
           </hashtable>
         </serializablePiece>
+      </com.confusionists.mjdj.settings.MorphAdaptor>
+    </entry>
+    <entry>
+      <string>AkaiOSC to Midi</string>
+      <com.confusionists.mjdj.settings.MorphAdaptor>
+        <active>true</active>
+        <orderNumber>0</orderNumber>
+        <dead>false</dead>
       </com.confusionists.mjdj.settings.MorphAdaptor>
     </entry>
     <entry>

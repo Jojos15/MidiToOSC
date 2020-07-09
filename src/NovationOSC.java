@@ -34,7 +34,7 @@ public class NovationOSC extends AbstractMorph {
         ShortMessage miniMessage = shortMessageWrapper.getShortMessage();
 
         if (shortMessageWrapper.getData2() == 127 && miniMessage.getChannel() == 1) {
-            OSCMessage msg = new OSCMessage("/exec/4/" + (shortMessageWrapper.getData1()-35) + "/", Collections.singletonList(1));
+            OSCMessage msg = new OSCMessage("/exec/3/" + (shortMessageWrapper.getData1()-35) + "/", Collections.singletonList(1));
             //getService().log((shortMessageWrapper.getData1()-35) + " NOVATION");
             sender.send(msg);
         }
