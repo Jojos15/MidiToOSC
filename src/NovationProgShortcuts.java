@@ -15,7 +15,7 @@ public class NovationProgShortcuts extends AbstractMorph{
 
         @Override
         public String getName() {
-            return "Novation OSC";
+            return "Novation PROGRAMMING";
         }
 
         @Override
